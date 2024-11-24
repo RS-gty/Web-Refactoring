@@ -11,4 +11,7 @@ class Environment(object):
         self.__env_id = str(uuid.uuid4())[:8]
 
     def isAccessible(self, target: np.ndarray) -> bool:
-        return linalg.norm(target - self.__center) <= self.__radius
+        return linalg.norm(target - self.__center) <= self.__radius or self.__radius == 0
+
+    def get_id(self):
+        return self.__env_id

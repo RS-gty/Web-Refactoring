@@ -5,7 +5,7 @@ import uuid
 
 class Environment(object):
     def __init__(self, tps: int, center: np.ndarray, radius: float):
-        self.__tps = tps
+        self._tps = tps
         self.__center = center
         self.__radius = radius
         self.__env_id = str(uuid.uuid4())[:8]

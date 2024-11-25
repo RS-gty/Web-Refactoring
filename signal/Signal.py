@@ -1,10 +1,10 @@
 import numpy as np
 
-from data.data import universe
+from data.data import universe, tps
 
 
 class Signal(object):
-    def __init__(self, center: np.ndarray, strength, frequency, duration, tps,
+    def __init__(self, center: np.ndarray, strength, frequency, duration,
                  direction=None, concentrate=np.pi):
         self.__center = center
         self.__strength = strength

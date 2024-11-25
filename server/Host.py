@@ -1,6 +1,7 @@
 import numpy as np
 import uuid
 
+from data import universe
 from server import Server
 from environment import *
 
@@ -12,6 +13,8 @@ class Host(Server):
         self.__server_ids: list[str] = []
         self.__environment: Environment = Environment(tps=tps, center=position, radius=radius)
         self.__env_id = self.__environment.get_id()
+
+        universe.receive_host(self)
 
     def isAccessible(self, target: np.ndarray) -> bool:
         return self.__environment.isAccessible(target)

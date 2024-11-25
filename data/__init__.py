@@ -1,1 +1,1 @@
-from data.data import universe
+from data.data import *
